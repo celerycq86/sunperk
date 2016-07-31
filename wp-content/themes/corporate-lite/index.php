@@ -14,7 +14,7 @@ get_header();
 ?>
 
     <div class="content-area">
-            	<h2 class="section-title"><?php _e('Our Blog','corporate-lite'); ?></h1>
+            	<!-- <h2 class="section-title"><?php _e('Our Blog','corporate-lite'); ?></h1>
 				<?php
 				$n = 0;
                 if ( have_posts() ) :
@@ -53,7 +53,32 @@ get_header();
                      get_template_part( 'no-results', 'index' );
                 
                 endif;
-                ?>
+                ?> -->
+        <div class="row intro">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <a href="http://localhost/quotation">
+                    <img src="http://localhost/wp-content/uploads/2016/07/quotation.jpg" alt="Quotation" title="quotation"/>
+                    <button class="btn btn-primary btn-lg">Get a Free Quotation</button>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-12">
+                <img src="http://localhost/wp-content/uploads/2016/07/solution.jpg" alt="Solution" title="Solution"/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-12">
+                <img src="http://localhost/wp-content/uploads/2016/07/design.jpg" alt="Design" title="Design"/>
+            </div>
+        </div>
+        <div class="row intro">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-12">
+                <img src="http://localhost/wp-content/uploads/2016/07/p1.jpg" alt="Quotation" title="quotation"/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-12">
+                <img src="http://localhost/wp-content/uploads/2016/07/p2.jpg" alt="Quotation" title="quotation"/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-12">
+                <img src="http://localhost/wp-content/uploads/2016/07/p3.jpg" alt="Quotation" title="quotation"/>
+            </div>
+        </div>
     </div>
 
 

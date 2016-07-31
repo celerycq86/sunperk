@@ -66,7 +66,7 @@
 /* Caption styles */
 .nivo-caption {
 	position:absolute;
-	left:3%;
+	left:50%;
 	top:10%;
 	color:#fff;
 	width:42%;
@@ -78,6 +78,8 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	height:auto;
+	margin-left: -23%;
+	text-align: center;
 }
 .nivo-caption p {
 	padding:5px;
@@ -110,7 +112,8 @@ a.nivo-nextNav {
 	position: absolute;
 	bottom:30px;
 	z-index:9;
-	left:42px;
+	left:50%;
+	margin-left: -27px;
 }
 .nivo-controlNav a {
 	cursor:pointer;
@@ -118,15 +121,17 @@ a.nivo-nextNav {
 .nivo-controlNav a {
     border: 0 none;
     display: inline-block;
-    height: 9px;
+    height: 10px;
     margin: 0 4px;
     text-indent: -9999px;
-    width: 40px;
-	background-color:#ffffff;
+    width: 10px;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
 }
 .nivo-controlNav a.active {
 	font-weight:bold;
     background-position: 0 -21px;
+    background: #fff!important;
 }
 
 .nivo-directionNav a {

@@ -13,23 +13,47 @@
 <meta name="viewport" content="width=device-width">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div class="top-bar">
 		<div class="aligner">
-        		<div class="top-left"><p class="call"><?php echo esc_attr(get_theme_mod('cont_phone','+1 500 000 0000')); ?></p><p class="mail"><a href="mailto:<?php echo esc_attr(get_theme_mod('cont_email','demo@example.com')); ?>"><?php echo esc_attr(get_theme_mod('cont_email','demo@example.com')); ?></a></p>
-                </div><!-- top-left -->
-                <div class="top-right"><?php get_template_part( 'menu', 'social' ); ?>
+        		<div class="top-left">
+              <!-- <p class="call"><?php echo esc_attr(get_theme_mod('cont_phone','+1 500 000 0000')); ?></p>
+              <p class="mail"><a href="mailto:<?php echo esc_attr(get_theme_mod('cont_email','demo@example.com')); ?>">
+                <?php echo esc_attr(get_theme_mod('cont_email','demo@example.com')); ?></a></p> -->
+            </div><!-- top-left -->
+                <div class="top-right">
+                  <?php get_template_part( 'menu', 'social' ); ?>
+                  <?php get_search_form(); ?>
+                  <!-- <ul class="search-box">
+                    <li><input type="text" class="form-control" placeholder="search..." /></li>
+                    <li><button class="search-btn"><i class="genericon genericon-search"></i></button></li>
+                  </ul> -->
+
+          <!-- <ul class="social">
+             <li class="facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook"><a href="#"><i class="genericon genericon-facebook"></i></a></li>
+          <?php if($wl_theme_options['twitter_link']!='') { ?>
+          <li class="twitter" data-toggle="tooltip" data-placement="bottom" title="Twiiter"><a href="<?php echo esc_url($wl_theme_options['twitter_link']); ?>"><i class="fa fa-twitter"></i></a></li>
+          <?php } if($wl_theme_options['linkedin_link']!='') { ?>         
+          <li class="linkedin" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><a href="<?php echo esc_url($wl_theme_options['linkedin_link']); ?>"><i class="fa fa-linkedin"></i></a></li>
+          <?php } if($wl_theme_options['youtube_link']!='') { ?>
+          <li class="youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"><a href="<?php echo esc_url($wl_theme_options['youtube_link']) ; ?>"><i class="fa fa-youtube"></i></a></li>
+                  <?php } ?>
+          </ul> -->
+
                 </div><!-- top-right --><div class="clear"></div>
         </div><!-- aligner -->
 </div><!-- top-bar -->
 <div class="header">
             		<div class="aligner">
                     		<div class="logo">
-                            		<?php corporate_lite_the_custom_logo(); ?>
-						<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_attr(bloginfo( 'name' )); ?></a></h1>
+                            		<?php corporate_lite_the_custom_logo(); ?><!-- 
+						<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_attr(bloginfo( 'name' )); ?></a></h1> -->
 
 					<?php $description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
@@ -116,8 +140,14 @@
     </div><!-- aligner -->
 </div><!-- grey-strip -->
 <?php }  ?>
+
+
+      <!-- BreadCrumb -->
+      <?php if (function_exists('weblizar_breadcrumbs') && !is_front_page()) weblizar_breadcrumbs(); ?>
+      <!-- BreadCrumb -->
+
       <div class="main-container">
-      <?php if(is_front_page()) { ?>
+     <!--  <?php if(is_front_page()) { ?>
       	<section class="services">
         	<div class="container">
                   <div class="hey-title"><?php echo esc_attr(get_theme_mod('section1_title','Hey!')); ?></div>
@@ -145,7 +175,7 @@
                     </div>
         </section>
    
-      <?php } ?>
+      <?php } ?> -->
          <?php if( function_exists('is_woocommerce') && is_woocommerce() ) { ?>
 		 	<div class="content-area">
                 <div class="middle-align content_sidebar">

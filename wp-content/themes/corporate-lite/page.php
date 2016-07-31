@@ -14,7 +14,7 @@ get_header(); ?>
 
 <div class="content-area">
     <div class="middle-align content_sidebar">
-        <div class="site-main" id="sitemain">
+        <div id="sitemain">
 			<?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'content', 'page' ); ?>
                 <?php
@@ -24,7 +24,6 @@ get_header(); ?>
                 ?>
             <?php endwhile; // end of the loop. ?>
         </div>
-        <?php get_sidebar('page'); ?>
         <div class="clear"></div>
     </div>
 </div>

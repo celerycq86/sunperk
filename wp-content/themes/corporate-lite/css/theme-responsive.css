@@ -7,39 +7,47 @@
 #slider .top-bar h1 { font-size:25px; padding-bottom:25px;}
 #slider .top-bar a{ font-size:14px; padding:8px 20px; margin-top:0; width:auto;}
 .container { width:auto; padding:0 20px;}
-.header { width:100%; padding:28px 20px; position:inherit !important;}
+.header { width:100%; padding:28px 0 0; position:inherit !important;}
 .logo { float:none; text-align:center;}
-#services-box { width:auto; display:block; margin-left:0; margin-bottom:20px; padding:20px;}
+.services-box { width:auto; display:block; margin-left:0; margin-bottom:20px; padding:0 30px; float: none;}
 .blogposts { width:auto; display:block; margin-bottom:30px;}
-.aligner{ width:93%;}
-.top-bar .top-left{ padding:15px 0; border-bottom:1px solid #727171;}
+.top-bar{ display: none;}
 .top-bar .top-left, .top-bar .top-right{ float:none; text-align:center; margin-top:0;}
 .top-right .social-icons a{ display:inline-table; float:none; height:45px; width:37px;}
 .copyright-wrapper .inner{ width:100%;}
-.footer-menu, .copyright{ float:none; text-align:center; margin-bottom:10px;}
+.footer-menu, .copyright{ float:none; text-align:center;}
 .sicons { width:auto;}
-.footer, .copyright { width:auto; padding:0 20px;}
+.footer, .copyright { width:auto; padding:20px;}
 .copyright-txt, .design-by { text-align:center; float:none;}
 
 /* ------ Extra ------ */
 .one_half{ width:100%; padding:0 10px;}
 .message-thumb{ width:100%; height:inherit !important}
+.aligner{ margin: 0 -20px;}
 .toggle{display:block;}
-.toggle a{width:100%; color:#ffffff; background:url(../images/mobile_nav_right.png) no-repeat right center #000000; padding:10px 10px; margin-top:20px; font-size:16px;}
-.toggle a:hover{ color:#ffffff !important;}
-.toggle a.active{color:#ffffff;}
+.toggle a{width:100%; color:#666; 
+	background:url(../images/mobile_nav_right.png) no-repeat right center #fff; padding:10px 10px; margin-top:20px; font-size:16px;
+	border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
+}
+.toggle a:hover{color:#666;}
+.toggle a.active{color:#666;}
 .nav{display:none;}
 .header .nav{float:none; margin:0; position:relative; overflow-x:hidden; }
-.header .nav ul{ width:100%; float:none !important; margin-top:0;  background-color:#222222;}
-.header .nav ul li{border-top:1px #303030 solid; display:block; float:none; text-align:left;}
-.nav ul li a{padding:5px 10px; display:block; color:#ffffff !important;}
-.nav ul li a:hover{color:#ff8a00;}
-.nav ul li ul, .nav ul li ul ul{ display:block !important;}
-.nav ul li ul li a:before{content:"\00BB \00a0";}
-.nav ul li ul li a{padding-left:20px !important;}
-.nav ul li ul li ul li a{padding-left:30px !important;}
+.header .nav ul{background:#fff; color:#000; width:100%; float:none !important; margin-top:0;}
+.header .nav ul li{border-top:1px #ccc solid; display:block; float:none; text-align:left;}
+.header .nav ul li:first-child{ margin-top: -1px;}
+.header .nav ul li:last-child{ border-bottom: 1px solid #ccc;}
+.header .nav ul li a{padding:10px; display:block;}
+.header .nav ul li:hover a{ color: #fff}
+.header .nav ul li:hover ul li a{ color: #666;}
+.header .nav ul li:hover ul li a:hover{ color: #fff;}
+.header .nav ul li ul, .nav ul li ul ul{ display:block !important;}
+.header .nav ul li ul li a:before{content:"|-"; margin-right: 5px;}
+.header .nav ul li ul li a{padding-left:40px !important;}
+.header .nav ul li ul li ul li a{padding-left:70px !important;}
 .header .header-inner{ width:100%; padding:15px 0;}
 .header .header-inner .logo{ float:none;}
+.breadcrumb{ display: none;}
 #slider .top-bar p{ display:none;}
 section{ padding:40px 0;}
 
@@ -68,7 +76,10 @@ h2.section-title{ margin-bottom:36px;}
 .clients img{ width:auto;}
 .footer-strip .footer-strip-title, .footer-strip .footer-strip-social{ float:none; text-align:center;}
 .footer-strip .footer-strip-social .social-icons a{ display:inline-table;}
-.services-box{ width:213px; float:none; margin:0 auto 15px; display:block;}
+
+.detail-sidebar{ overflow: auto; height: auto;}
+.wp-caption{ width: 100%!important;}
+.footer-menu #menu-social ul li{display: inline-block;}
 }
 
 /* Mobile Landscape View */
@@ -79,9 +90,10 @@ h2.section-title{ margin-bottom:36px;}
 #slider .top-bar h1 { font-size:30px; padding-bottom:5px;}
 #slider .top-bar a{ font-size:18px; padding:8px 20px; margin-top:20px;}
 .container { width:auto; padding:0 20px;}
-.header { padding:28px 20px; position:inherit !important;}
+.aligner{ padding: 0;}
+.header { padding:28px 0 0; position:inherit !important;}
 .logo { float:none; text-align:center;}
-#services-box { width:268px; display:block; margin:0 auto 20px; float:none; padding:20px;}
+.services-box { width:268px; display:block; margin:0 auto 20px; float:none; padding:0 30px;}
 .blogposts { width:auto; display:block; margin-bottom:30px;}
 .sicons { width:auto;}
 .footer, .copyright { width:auto; padding:0 20px;}
@@ -91,21 +103,29 @@ h2.section-title{ margin-bottom:36px;}
 .one_half{ width:100%; padding:0 10px;}
 .message-thumb{ width:100%; height:inherit !important}
 .toggle{display:block;}
-.toggle a{width:100%; color:#ffffff; background:url(../images/mobile_nav_right.png) no-repeat right center #000000; padding:10px 10px; margin-top:20px; font-size:16px;}
-.toggle a:hover{color:#ffffff;}
-.toggle a.active{color:#ffffff;}
+.toggle a{width:100%; color:#666; 
+	background:url(../images/mobile_nav_right.png) no-repeat right center #fff; padding:10px 10px; margin-top:20px; font-size:16px;
+	border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
+}
+.toggle a:hover{color:#666;}
+.toggle a.active{color:#666;}
 .nav{display:none;}
 .header .nav{float:none; margin:0; position:relative; overflow-x:hidden; }
-.header .nav ul{background:#000000; color:#000; width:100%; float:none !important; margin-top:0;}
-.header .nav ul li{border-top:1px #303030 solid; display:block; float:none; text-align:left;}
-.nav ul li a{padding:5px 10px; display:block; color:#000;}
-.nav ul li a:hover{color:#ff8a00;}
-.nav ul li ul, .nav ul li ul ul{ display:block !important;}
-.nav ul li ul li a:before{content:"\00BB \00a0";}
-.nav ul li ul li a{padding-left:20px !important;}
-.nav ul li ul li ul li a{padding-left:30px !important;}
+.header .nav ul{background:#fff; color:#000; width:100%; float:none !important; margin-top:0;}
+.header .nav ul li{border-top:1px #ccc solid; display:block; float:none; text-align:left;}
+.header .nav ul li:first-child{ margin-top: -1px;}
+.header .nav ul li:last-child{ border-bottom: 1px solid #ccc;}
+.header .nav ul li a{padding:10px; display:block;}
+.header .nav ul li:hover a{ color: #fff}
+.header .nav ul li:hover ul li a{ color: #666;}
+.header .nav ul li:hover ul li a:hover{ color: #fff;}
+.header .nav ul li ul, .nav ul li ul ul{ display:block !important;}
+.header .nav ul li ul li a:before{content:"|-"; margin-right: 5px;}
+.header .nav ul li ul li a{padding-left:40px !important;}
+.header .nav ul li ul li ul li a{padding-left:70px !important;}
 .header .header-inner{ width:100%; padding:15px 0;}
 .header .header-inner .logo{ float:none;}
+.breadcrumb{ display: none;}
 a.arrow-down, #slider .top-bar p{ display:none;}
 #prevslide, #nextslide{ top:0;}
 .copyright-wrapper .inner{ width:100%;}
@@ -116,7 +136,7 @@ section{ padding:40px 0;}
 .content-area{ width:auto; margin:0 20px; padding:50px 0;}
 .site-main{ width:auto; margin:0; padding:0; float:none;}
 #sidebar{ width:auto; margin:60px 0 0; padding:0; float:none;}
-.nivo-caption{ top:0 !important; width:80% !important; height:90%;}
+.nivo-caption{ top:0 !important; width:80% !important; height:90%; margin-left: -40%!important}
 #slider .top-bar{ top:35px !important; padding-bottom:32px;}
 #slider .top-bar h2{ font-size:24px !important; padding-bottom:10px !important; line-height:35px;}
 #slider .top-bar h4{ font-size:17px !important;}
@@ -132,8 +152,6 @@ h2.section-title{ margin-bottom:38px;}
 .footer-col{ width:100%; margin-bottom:20px;}
 .footer-col .foot-post .foot-post-content{ width:195px;}
 .clients img{ margin-bottom:20px;}
-.aligner{ width:93%;}
-.top-bar .top-left{ padding:15px 0;}
 .top-bar .top-left, .top-bar .top-right{ float:none; text-align:center; margin-top:0;}
 .top-right .social-icons a{ display:inline-table; float:none; height:45px; width:37px; border-top:1px solid #727171;}
 .nivo-controlNav, #slider .slide-cap{ display:none;}
@@ -143,8 +161,8 @@ h2.section-title{ margin-bottom:38px;}
 .clients img{ width:auto; display:table-cell;}
 .footer-strip .footer-strip-title, .footer-strip .footer-strip-social{ float:none; text-align:center;}
 .footer-strip .footer-strip-social .social-icons a{ display:inline-table;}
-.services-box{ width:213px; float:none; margin:0 auto 15px; display:block;}
-
+.wp-caption{ width: 100%!important;}
+.footer-menu #menu-social ul li{display: inline-block;}
 }
 
 
@@ -154,33 +172,34 @@ h2.section-title { line-height:48px; font-size:35px !important;}
 .cat_comments{ height:auto;}
 #contact .column-2, #contact .column-2.last_column{ width:100%; float:none; margin:0 0 20px 0;}
 #aboutsec .last_column{ width:100%; margin-right:0;}
+.detail-sidebar{ overflow: auto; height: auto;}
 }
-
 
 /* Tablet View */
 
 @media screen and (max-width:999px) and (min-width:720px) { 
 *{box-sizing:border-box;}
 .container { width:auto; padding:0 20px;}
-.header { padding:25px 0;}
-.aligner{ width:93%;}
-#services-box { width:47.0%; display:inline-block; margin-bottom:20px; margin-left:2% !important; padding:20px;}
+.services-box { width:47.0%; display:inline-block; margin-bottom:20px; margin-left:2% !important; padding:20px;}
 .blogposts { width:31%; display:inline-block; margin-bottom:30px;}
 .sicons { width:94%; margin:auto;}
-.footer, .copyright { width:auto; padding:0 20px;}
+.footer, .copyright { width:auto; padding:20px;}
 .cat_comments .cat, .cat_comments .comnt{ font-size:10px;}
-
 
 /* ------ Extra ------ */
 .message-thumb{ width:100%; height:inherit !important}
 .header .header-inner{ width:100%; padding:15px 0;}
 .header .header-inner .logo{ float:none; text-align:center;}
+.header .logo{ width: 170px; margin-top: -49px;}
+.header .logo p{ display: none;}
+.header .nav{ float: left; text-align: left;}
+.header .nav ul li a{ padding: 20px;}
 
 /* --------- Pages ------- */
 .content-area{ width:auto; margin:0 20px; padding:50px 0;}
 .site-main{ width:60%; margin:0; padding:0; float:left;}
 #sidebar{ width:35%; margin:0; padding:0; float:right;}
-.nivo-caption{ top:14% !important; height:100% !important; width:69% !important;}
+.nivo-caption{ top:14% !important; height:100% !important; width:69% !important; margin-left: -35%!important;}
 #slider .top-bar{ top:80px !important; margin-bottom:0;}
 a.read-more, .common_btn{ margin-top:2px;}
 #slider .top-bar p{ font-size:12px !important; line-height:17px !important;}
@@ -199,19 +218,26 @@ a.contact{ margin-top:15px !important; font-size:18px !important;}
 #slider .slide-cap h4, #slider .slide-cap h2{ font-size:28px !important;}
 #slider .slide-cap h4{ padding-top:4px;}
 #slider .slide-cap{ padding-top:0;}
-.nivo-controlNav{ bottom:-17px !important; left:28px !important;}
+.nivo-controlNav{ bottom:-17px !important;}
 .grey-strip{ font-size:14px;}
 .grey-strip a.buy-button{ font-size:12px;}
 .footer-col h2{ font-size:20px;}
+.detail-sidebar{ overflow: auto; height: auto;}
+.wp-caption>a{ height: 150px!important;}
+}
+
+@media screen and (max-width: 804px) and (min-width: 720px){
+	.header .nav ul li a{ font-size: 14px;}
 }
 
 @media screen and (min-width: 1000px) {
 .header .header-inner .nav ul li ul li{display:block; position:relative; float:none; }
 .header .header-inner .nav ul li ul li a{color:#000; display:block; padding-top:10px; padding-bottom:10px; border-bottom:1px #313131 solid;}
+.wp-caption>a{ height: 250px!important;}
 }
 
 @media screen and (min-width:1000px) and (max-width:1159px){
-	.header .header-inner, .container, .copyright-wrapper .inner, .aligner, .content-area{ width:95%;}
+	/*.header .header-inner, .container, .copyright-wrapper .inner, .aligner, .content-area{ width:95%;}*/
 	.nivo-caption{ top:2% !important; height:auto !important;}
 	#aboutsec .cont-fix{ width:auto !important;}
 	.cat_comments .cat{ width:48%;}
